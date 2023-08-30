@@ -1,17 +1,15 @@
 #include "main.h"
 
 /**
- * factorial - returns the factorial of a number
- * @n: number to return the factorial from
- *
- * Return: factorial of n
+ * _print_rev_recursion - Prints a string in reverse.
+ * @s: Sets the string to be printed.
  */
-int factorial(int n)
+void _print_rev_recursion(char *s)
 {
-	if (n < 0)
-		return (-1);
-	if (n == 0)
-		return (1);
-	return (n * factorial(n - 1));
+	if (*s)
+	{
+		_print_rev_recursion(s + 1);
+		_putchar(*s);
+	}
 }
 
